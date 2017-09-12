@@ -23,7 +23,7 @@ class Buttons extends React.Component{
   }
   render(){
     let cloneChildren = child => 
-      React.cloneElement(child, { // 
+      React.cloneElement(child, { 
         onClick: this.selectItem.bind(this, child.props.value)
       });
 
