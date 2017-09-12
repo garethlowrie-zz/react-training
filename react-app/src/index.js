@@ -9,6 +9,7 @@ import HigherOrderComponents from './HigherOrderComponents';
 import JSXCompiler from './JSXCompiler';
 import Children from './Children';
 import CloneElements from './CloneElements';
+import ReusableComponents from './ReusableComponents';
 
 ReactDOM.render(
     <App cat={5} txt="Hello World Prop Title" />,
@@ -54,6 +55,11 @@ ReactDOM.render(
 ReactDOM.render(
     <CloneElements />,
     document.getElementById('cloneElements')
+);
+
+ReactDOM.render(
+    <ReusableComponents />,
+    document.getElementById('reusableComponents')
 );
 
 
