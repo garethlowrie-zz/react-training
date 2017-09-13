@@ -20,7 +20,15 @@ class ReusableComponents extends React.Component{
     return(
       <div>
       <h1>Slider</h1>
-        
+        <NumInput
+          ref="red"
+          min={0}
+          max={255}
+          step={1}
+          val={this.state.red}
+          label="Red"
+          update={this.update}
+        />
         {this.state.red}
       </div>
     )
@@ -29,6 +37,8 @@ class ReusableComponents extends React.Component{
 
 class NumInput extends React.Component{
   render(){
+    let label = this.props.label !== '' ?
+      <label>{this.props.label}</label> : ''
     return(
       <div>
         <input
